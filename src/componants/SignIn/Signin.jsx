@@ -527,11 +527,12 @@ function Login({ onLogin }) {
     const handleOnChange = ({ currentTarget: input }) => {
         setsignInDetails({ ...signInDetails, [input.name]: input.value });
     };
+    const BASE_URL = process.env.REACT_APP_API_URL;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = 'http://localhost:3001/api/login';
+            const url = `${BASE_URL}api/login`;
             const response = await axios.post(url, signInDetails, {
                 headers: {
                     'Content-Type': 'application/json',

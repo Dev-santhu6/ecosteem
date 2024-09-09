@@ -10,6 +10,7 @@ const SignUp = () => {
 	const handleOnchange = ({ currentTarget: input }) => {
 		setuserDetails({ ...userDetails, [input.name]: input.value });
 	};
+    const BASE_URL = process.env.REACT_APP_API_URL;
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -24,7 +25,7 @@ const SignUp = () => {
             return;
         }
 		try {
-			const url = `http://localhost:3001/api/user/register`;
+			const url = `${BASE_URL}api/user/register`;
 			const { data } = await axios.post(url, userDetails);
             console.log(data);
 			// localStorage.setItem("userinfo", JSON.stringify(userDetails.name));
