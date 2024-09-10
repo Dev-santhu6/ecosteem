@@ -6,6 +6,7 @@ const GetFolderForm = () => {
   const [folderName, setFolderName] = useState('');
   const [folderDetails, setFolderDetails] = useState(null);
   const [error, setError] = useState(null);
+
   const BASE_URL = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (e) => {
@@ -43,7 +44,7 @@ const GetFolderForm = () => {
       {folderDetails && (
         <div className="details">
           <h3>Folder Details</h3>
-          <p><strong>Folder ID:</strong> {folderDetails.folderId}</p>
+          {/* <p><strong>Folder ID:</strong> {folderDetails.folderId}</p> */}
           <p><strong>Folder Name:</strong> {folderDetails.folderName}</p>
 
           <h4>Details File Content</h4>
