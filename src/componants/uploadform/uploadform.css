@@ -189,3 +189,8 @@ button[type="submit"]:hover {
       transform: translateY(-20px);
   }
 }
+
+.blur {
+  filter: blur(5px); /* Adjust the blur radius as needed */
+  pointer-events: none; /* Disable form interactions during loading */
+}

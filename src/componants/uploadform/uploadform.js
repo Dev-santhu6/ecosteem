@@ -454,14 +454,14 @@ function UploadForm() {
 
                             <input
                                 type="text"
-                                placeholder="Why Choose"
+                                placeholder="Model"
                                 value={mat.whyChoose}
                                 onChange={(e) => handleMaterialChange(index, 'whyChoose', e.target.value)}
                                 required
                             />
                             <input
                                 type="text"
-                                placeholder="Model"
+                                placeholder="Quantity"
                                 value={mat.model}
                                 onChange={(e) => handleMaterialChange(index, 'model', e.target.value)}
                                 required
